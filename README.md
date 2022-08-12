@@ -4,7 +4,7 @@
 
 </div>
 
-[GITHUB URL](https://drive.google.com/file/d/1Y3JY6TmnUkG_pVEHQQPoqUQQ6hMxyhlY/view)
+[GITHUB URL](https://github.com/aescobar73/ReadME-Generator)
 
 <br>
 
