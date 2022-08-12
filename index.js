@@ -42,7 +42,7 @@ inquirer
         {
             type: 'list',
             message: chalk.green('Licenses?'),
-            choices: [ "MIT", "Javascript", "C++", "Python"],
+            choices: [ "MIT", "Apache License 2.0", "ISC", "None"],
             name: 'license',
         },
         {
@@ -83,58 +83,62 @@ ${renderLicenseBadge(response.license)}
 - [Test](#tests)
 - [Question](#questions)
 
-
 <br>
 
 ## Installation\n 
 
         ${response.instructions}\n 
-
 <br>
 
 ## Usage\n 
 
         ${response.info}\n 
-
-<br>
-
-## License\n
-
-Licensed under the ${renderLicenseLink(response.license)} license.
-
 <br>
 
 ## Contributing\n 
 
             ${response.guidelines}
-
 <br>
 
 ## Tests\n 
 
             ${response.test}
+<br>
+
+## Questions\n - ${response.email}\n - ${response.github}\n 
 
 <br>
 
-## Questions\n - ${response.email}\n - ${response.github}\n `
+## License\n
+
+${renderLicenseLink(response.license)} `
         
 
-        fs.writeFile('README.md', (readPage), (err) => {
+        fs.writeFile('TestREADME.md', (readPage), (err) => {
             err ? console.error(err) : console.log('ReadMe Created!')
         } )
 
         function renderLicenseBadge(license) {
             if(license === "MIT") {
                 return "![License: MIT](https://img.shields.io/badge/License-MIT-orange)";
-            } else {
+            } else if (license === "Apache License 2.0") {
+                return "![License: Apache License 2.0](https://img.shields.io/badge/License-Apache:2.0-blue)";
+            } else if (license === "ISC") {
+                return "![License: ISC](https://img.shields.io/badge/License-ISC-brightgreen)";
+            } else if (license === "None") {
                 return " "
             }
         }
 
         function renderLicenseLink(license) {
             if (license === 'MIT' ) {
-                return "[MIT](https://choosealicense.com/licenses/mit/)"
-            
+                return "Licensed by [MIT](https://choosealicense.com/licenses/mit/)."
+            } else if (license === "Apache License 2.0") {
+                return "License by [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)."
+            } else if (license === "ISC") {
+                return "License by [ISC](https://choosealicense.com/licenses/isc/)."
+            } else if (license === "None") { 
+                return " "
             }
         }
     })
