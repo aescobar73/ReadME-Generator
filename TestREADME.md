@@ -5,12 +5,12 @@
 
 <br> 
 
-![License: ISC](https://img.shields.io/badge/License-ISC-brightgreen)
+![License: Apache License 2.0](https://img.shields.io/badge/License-Apache:2.0-blue)
 
 ## About The Project
  
 
-        To create a README.md using node.js
+        Creates a markdown file.
 
 
 <br>
@@ -30,14 +30,14 @@
 ## Installation
  
 
-        Install using terminal
+        Install using node.js
  
 <br>
 
 ## Usage
  
 
-        For educational purposes
+        For educational purposes.
  
 <br>
 
@@ -63,4 +63,4 @@
 ## License
 
 
-License by [ISC](https://choosealicense.com/licenses/isc/). 
+License by [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/). 
